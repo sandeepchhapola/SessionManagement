@@ -1,0 +1,62 @@
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Dashboard</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-user fa-fw"></i> Serach for friends
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" ng-model="searchByEmail" placeholder="Search by email...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" ng-Click="searchFriend(searchByEmail)" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div id="tablecontent">
+                                <table id="table1" >
+                                    <tbody>
+                                    <tr align="center" ng-repeat="user in yoUsers">
+                                        <td>
+                                            nickName:<strong>{{user.nickName}}</strong>
+                                        </td>
+                                        <td >
+                                            Email:<strong>{{user.email}}</strong>
+                                        </td>
+                                        <td>
+                                            <input type="button" class="btn btn-block btn-info" ng-click="addFriend($index)" value="add friend">
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-8 -->
+
+        <!-- /.col-lg-4 -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /#page-wrapper -->

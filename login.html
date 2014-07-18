@@ -1,0 +1,105 @@
+<html ng-app="myApp">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+    <title>Signin</title>
+    <script src="app/js/YoNinjaApp.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/custom.css">
+    <link type="text/css" rel="stylesheet" href="http://img2.mmo.mmo4arab.com/accountsmmo/css/12v1/mmo_layout_min.css?20120508">
+    <link type="text/css" rel="stylesheet" href="http://img2.mmo.mmo4arab.com/accountsmmo/css/12v1/sign.css?20120508">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body ng-controller="userController">
+<div class="fullbg">
+    <div class="page">
+        <div class="topbar">
+            <h2 class="title">Welcome to YoNinja</h2>
+        </div>
+        <div class="mainct clearfix">
+            <div class="main_left">
+                <div class="regForm">
+                    <form>
+                        <fieldset>
+                            <label for="email">Email:</label>
+                            <div class="field">
+                                <input type="text" tabindex="5" name="email"
+                                       class="input_text" id="email">
+                                <p class="desc">
+                                    Email will be the username upi use to sign in with
+                                </p>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <label for="nickname">Nickname:</label>
+                            <div class="field">
+                                <input type="text" maxlength="40" tabindex="6" value=""
+                                       name="nickname" class="input_text" id="nickname">
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <label for="password">Password:</label>
+                            <div class="field">
+                                <input type="password" maxlength="40" tabindex="7" name="password"
+                                       class="input_pwd" id="password">
+
+                            </div>
+                            <div class="msg">
+                                <span id="password_chk" class="text"></span>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <label for="password_c">Confirm Password:</label>
+                            <div class="field">
+                                <input type="password" maxlength="40" tabindex="8"
+                                       name="apassword" class="input_pwd" id="password_c">
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <button><a tabindex="12" class="btn "  ng-click="addNewUser()">Sign Up
+                            </a></button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Login Form -->
+            <div class="main_right">
+                <div class="wrap">
+                    <div id="loginForm" class="loginForm">
+                        <div class="loginform_title">
+                            <h1>YoNinja</h1>
+                        </div>
+                        <div>
+                            <form>
+                                <fieldset>
+                                    <label for="login_email">Email:</label>
+
+                                    <div class="field">
+                                        <input type="text" tabindex="1" class="input_text" id="login_email">
+                                    </div>
+                                </fieldset>
+
+                                <fieldset>
+                                    <label for="reg_pwd">Password:</label>
+
+                                    <div class="field">
+                                        <input type="password" tabindex="2" class="input_pwd" id="reg_pwd">
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <button>
+                                    <a tabindex="4"  ng-click="login()" class="btn btn_hover_sty" href="">Sign In
+                                    </a>
+                                    </button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
